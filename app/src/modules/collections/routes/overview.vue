@@ -1,10 +1,23 @@
 <template>
-	<private-view class="collections-overview" :title="t('collections')">
-		<template #title-outer:prepend>
-			<v-button class="header-icon" rounded disabled icon secondary>
-				<v-icon name="box" />
+	<!--	<private-view class="collections-overview" :title="t('Individuelle Anforderungenkataloge')">-->
+	<private-view class="collections-overview">
+		<template #actions>
+			<v-button rounded icon to="/settings/data-model/+" v-tooltip.bottom="t('create_collection')">
+				<v-icon name="add" />
 			</v-button>
 		</template>
+		<template #title-outer:prepend>
+			<v-button class="headbutton">
+				<v-text-overflow :text="t('Kataloge')" />
+			</v-button>
+			<v-button class="headbutton">
+				<v-text-overflow :text="t('Profile')" outlined />
+			</v-button>
+			<!--		<v-button class="header-icon" rounded disabled icon secondary>
+			 	<v-icon name="box" /> 
+			</v-button>-->
+		</template>
+		<v-text-overflow class="headline" :text="t('Individuelle Anforderungenkataloge')" />
 
 		<template #navigation>
 			<collections-navigation-search />
@@ -117,5 +130,16 @@ export default defineComponent({
 .v-table {
 	padding: var(--content-padding);
 	padding-top: 0;
+}
+
+.headline {
+	margin-left: 84px;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+.headbutton {
+	--v-button-background-color: white;
+	--v-button-color: black;
 }
 </style>

@@ -6,6 +6,11 @@
 		@contextmenu.prevent.stop="activateContextMenu"
 		:mandatory="false"
 	>
+		<button class="list-item">Schutzziele</button>
+		<button class="list-item">Anforderungsmanagement</button>
+		<button class="list-item">Maßnahmen Kataloge</button>
+		<button class="list-item">Gefährdungen</button>
+		<!--
 		<template v-if="customNavItems && customNavItems.length > 0">
 			<template v-for="(group, index) in customNavItems" :key="group.name">
 				<template
@@ -43,7 +48,7 @@
 				<v-text-overflow :text="navItem.name" />
 			</v-list-item-content>
 		</v-list-item>
-
+-->
 		<template v-if="bookmarks.length > 0">
 			<v-divider />
 
@@ -204,5 +209,10 @@ export default defineComponent({
 
 .hidden-collection {
 	--v-list-item-color: var(--foreground-subdued);
+}
+
+.list-item {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 </style>

@@ -54,8 +54,8 @@ const checkForSystem: NavigationGuard = (to, from) => {
 
 export default defineModule({
 	id: 'collections',
-	name: '$t:collections',
-	icon: 'box',
+	name: '$t:Kontext',
+	icon: 'tune',
 	routes: [
 		{
 			name: 'collections-overview',

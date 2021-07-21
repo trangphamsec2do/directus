@@ -5,8 +5,8 @@ import Item from './routes/item.vue';
 
 export default defineModule({
 	id: 'files',
-	name: '$t:file_library',
-	icon: 'folder',
+	name: '$t:Team',
+	icon: 'people_alt',
 	routes: [
 		{
 			name: 'files-collection',

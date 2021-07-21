@@ -4,8 +4,8 @@ import Item from './routes/item.vue';
 
 export default defineModule({
 	id: 'users',
-	name: '$t:user_directory',
-	icon: 'people_alt',
+	name: '$t:Workspace',
+	icon: 'workspaces',
 	routes: [
 		{
 			name: 'users-collection',
